@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+	<head>
+		<title>ABOGO</title>
+		<meta charset = "UTF-8">
+		<link rel = "stylesheet" type = "text/css" href = "index.css">
+     	<link href="index.css" rel="stylesheet">
+			 <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+			 <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+			 <script src = "index.js"></script>
+			 <script src = "prototype.js"></script>
+	</head>
+	<body>
+		<div class="nav-bar">
+		<ul>
+			<a class="navbar-brand" href="https://www.artsbuildontario.ca/"><img src="logo.png" width="308" height="48" alt="ARTSBUILD ONTARIO"/></a>
+			<li><a href="#contact">CONTACT US</a></li>
+		</ul>
+		</div>
+
+		<div id="headbanner">
+			<div class="box">
+				<p>
+		        <img src="abogologo.png" width="100%" alt="Logo"/> </p>
+			</div>
+
+			<div id="my-login-button-target" >
+			  <script>
+				   window.snapKitInit = function () {
+					var loginButtonIconId = 'my-login-button-target';
+					// Mount Login Button
+					snap.loginkit.mountButton(loginButtonIconId, {
+					  clientId: 'your-clientId',
+					  redirectURI: 'your-redirectURI',
+					  scopeList: [
+						'user.display_name',
+						'user.bitmoji.avatar',
+					  ],
+					  handleResponseCallback: function() {
+						snap.loginkit.fetchUserInfo()
+						  .then(data => console.log('User info:', data));
+					  },
+					});
+				  };
+
+				  // Load the SDK asynchronously
+				  (function (d, s, id) {
+					var js, sjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "https://sdk.snapkit.com/js/v1/login.js";
+					sjs.parentNode.insertBefore(js, sjs);
+				  }(document, 'script', 'loginkit-sdk'));
+				</script>
+			</div>
+		</div>
+			
+      <div class="square">
+		<button class="button1"></button>
+		<button class="button2"></button>
+		<button class="button3"></button>
+	  
+	  </div>
+
+			<div id="map">
+				<img src="emptymap.png" alt="map" width="90%">
+			</div>
+
+	<div class="container">
+  	<h2 class="display" id="contact">Contact Us!</h2>
+		<p style="text-align:center; font-size: 25px; background-color: white;"><strong>Phone</strong> : (519) 880 3670</p>
+		<p style="text-align:center; font-size: 25px; background-color: white;"><strong>ARTSBUILD Ontario<br><br>Address</strong> : 44 Gaukel St, Kitchener, ON N2G 4P3 <br><strong>Phone</strong> : (519) 880 3670</p>
+	<div class="mapdiv">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2896.5132517967727!2d-80.49573608477839!3d43.44988087357273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf4f38146b00b%3A0x72374d6701349b7d!2sARTSBUILD+ONTARIO!5e0!3m2!1sen!2sca!4v1547335369932" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+	</div>
+	<br><br>
+
+	<!-- Footer -->
+	<footer class= "footer">
+		<p style = "color:whitesmoke;">&nbsp;</p>
+        <p style = "color:whitesmoke;">Copyright &copy;2019 | All rights reserved.</p>
+      </footer>
+	</body>
+</html>
